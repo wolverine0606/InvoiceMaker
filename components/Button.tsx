@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import { TouchableOpacity, TouchableOpacityProps, View } from 'react-native';
-import { Text, makeStyles } from 'theme';
+import { AppText, makeStyles } from 'theme';
 
 type ButtonProps = {
   title?: string;
@@ -11,9 +11,9 @@ export const Button = forwardRef<View, ButtonProps>(({ title, ...touchableProps 
 
   return (
     <TouchableOpacity ref={ref} {...touchableProps} style={[styles.button, touchableProps.style]}>
-      <Text variant="body" textAlign="center" color="white" fontWeight="600">
+      <AppText variant="body" textAlign="center" color="whiteOnSurface" fontWeight="600">
         {title}
-      </Text>
+      </AppText>
     </TouchableOpacity>
   );
 });
@@ -21,13 +21,13 @@ export const Button = forwardRef<View, ButtonProps>(({ title, ...touchableProps 
 const useStyles = makeStyles((theme) => ({
   button: {
     alignItems: 'center',
-    backgroundColor: theme.colors.purple,
+    backgroundColor: theme.colors.magentaDeep,
     borderRadius: theme.borderRadii.xl_24,
     elevation: 5,
     flexDirection: 'row',
     justifyContent: 'center',
     padding: theme.spacing.m_16,
-    shadowColor: theme.colors.black,
+    shadowColor: theme.colors.blackJet,
     shadowOffset: {
       height: 2,
       width: 0,

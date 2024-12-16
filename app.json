@@ -3,7 +3,6 @@
     "name": "InvoiceMaker",
     "slug": "InvoiceMaker",
     "version": "1.0.0",
-
     "scheme": "InvoiceMaker",
     "web": {
       "bundler": "metro",
@@ -21,15 +20,12 @@
     ],
     "experiments": {
       "typedRoutes": true,
-
       "tsconfigPaths": true
     },
-
+    "newArchEnabled": true,
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -37,12 +33,21 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.InvoiceMaker"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8c1c4237-6cfb-4bf1-9401-ebfc15dc3d06"
       }
     }
   }

@@ -1,6 +1,4 @@
-import { Box, Text } from 'theme';
-
-import { EditScreenInfo } from './EditScreenInfo';
+import { AppBox, AppText } from 'theme';
 
 type ScreenContentProps = {
   title: string;
@@ -8,13 +6,12 @@ type ScreenContentProps = {
   children?: React.ReactNode;
 };
 
-export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
+export const ScreenContent = ({ title }: ScreenContentProps) => {
   return (
-    <Box flex={1} alignItems="center" justifyContent="center">
-      <Text variant="title">{title}</Text>
-      <Box height={1} marginVertical="l_32" width="80%" backgroundColor="gray" />
-      <EditScreenInfo path={path} />
-      {children}
-    </Box>
+    <AppBox flex={1} alignItems="center" justifyContent="center">
+      <AppText color="whiteOnSurface" variant="title">
+        {title}
+      </AppText>
+    </AppBox>
   );
 };
